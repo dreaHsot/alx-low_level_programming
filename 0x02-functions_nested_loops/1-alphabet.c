@@ -1,14 +1,14 @@
 #include "main.h"
 
 /**
-  * main - entry point
+  * print_alphabet - Print alphabets in lowercase using _putchar
   *
   * description - prints alphabets in lowercase
   *
   * Return: 0
   */
 
-int main(void)
+void print_alphabet(void)
 {
 	char alphabets;
 
@@ -16,5 +16,5 @@ int main(void)
 	{
 		_putchar(alphabets);
 	}
-	return (0);
+	_putchar('\n');
 }
