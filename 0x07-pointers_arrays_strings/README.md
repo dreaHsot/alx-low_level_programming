@@ -1,1 +1,1 @@
-@alx decided to grill me more on pointers, arrays and strings
+alx decided to grill me more on pointers, arrays and strings
