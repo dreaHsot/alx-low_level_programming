@@ -9,15 +9,19 @@
  */
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
+	char *a;
+	int i;
+
 	if (nmemb < 1 || size < 1)
 		return (NULL);
 
-	void *a = malloc(nmemb * size);
+	a = malloc(nmemb * size);
 
 	if (a == NULL)
 		return (NULL);
 
-	memset(a, 0, nmemb * size);
+	for (i = 0; i < (nmemb * size); i++)
+		a[i] = 0;
 
 	return (a);
 }
