@@ -10,7 +10,7 @@
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
 	char *a;
-	int i;
+	unsigned int i;
 
 	if (nmemb < 1 || size < 1)
 		return (NULL);
