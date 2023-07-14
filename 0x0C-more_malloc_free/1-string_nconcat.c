@@ -30,7 +30,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	if (num >= j)
 		num = j;
 
-	s = (char *)malloc((i + num + 1) * sizeof(char));
+	s = malloc((i + num + 1) * sizeof(char));
 
 	if (s == NULL)
 		return (NULL);
@@ -39,9 +39,9 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		s[k] = s1[k];
 
 	for (j = 0; j < num; j++)
-		s[k + j] = s2[j];
+		s[k++] = s2[j];
 
-	s[k + j] = '\0';
+	s[k] = '\0';
 
 	return (s);
 }
