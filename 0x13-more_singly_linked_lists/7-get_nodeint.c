@@ -2,8 +2,8 @@
 
 /**
   * get_nodeint_at_index - finds the nth node of a linked list
-  * head: head of the list
-  * index: index of the node, starting at 0
+  * @head: head of the list
+  * @index: index of the node, starting at 0
   * Return: dsired node
   */
 
