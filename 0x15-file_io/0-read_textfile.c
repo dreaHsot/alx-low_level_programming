@@ -11,9 +11,13 @@ ssize_t read_textfile(const char *filename, size_t letters)
 {
 	char *buf = NULL;
 	ssize_t tread, twritten;
-	FILE *fp = fopen(filename, "r");
+	FILE *fp = NULL;
 
-	if (fp == NULL || filename == NULL)
+	if (filename == NULL)
+		return (0);
+
+	fp = fopen(filename, "r");
+	if (fp == NULL)
 		return (0);
 
 	buf = (char *)malloc(letters + 1);
@@ -24,9 +28,9 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	}
 
 	tread = fread(buf, sizeof(char), letters, fp);
-	if (ferror(fp))
+	if (tread < 0)
 	{
-		free(fp);
+		free(buf);
 		fclose(fp);
 		return (0);
 	}
