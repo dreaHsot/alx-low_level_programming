@@ -24,7 +24,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	}
 
 	tread = fread(buf, sizeof(char), letters, fp);
-	if (tread == 0 || ferror(fp))
+	if (ferror(fp))
 	{
 		free(fp);
 		fclose(fp);
